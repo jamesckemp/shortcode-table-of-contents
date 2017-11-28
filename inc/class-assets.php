@@ -25,6 +25,6 @@ class JCK_STOC_Assets {
 
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		// wp_enqueue_script( 'jck-sfr-main', JCK_STOC_Assets_URL . 'frontend/js/main' . $suffix . '.js', array( 'jquery' ), JCK_SFR_VERSION, true );
+		wp_enqueue_script( 'anchorific', JCK_STOC_ASSETS_URL . 'vendor/js/anchorific.min.js', array( 'jquery' ), JCK_STOC_VERSION, true );
 	}
 }

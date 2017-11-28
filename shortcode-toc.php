@@ -84,6 +84,7 @@ class JCK_Shortcode_TOC {
 		spl_autoload_register( array( $this, 'autoload' ) );
 
 		JCK_STOC_Assets::run();
+		JCK_STOC_Shortcodes::run();
 	}
 
 	/**
