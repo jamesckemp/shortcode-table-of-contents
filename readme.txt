@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Display a table of contents by using a simple shortcode.
+Display an automated table of contents via shortcode.
 
 == Description ==
 
