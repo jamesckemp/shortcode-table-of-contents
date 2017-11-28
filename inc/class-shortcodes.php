@@ -20,9 +20,11 @@ class JCK_STOC_Shortcodes {
 	}
 
 	/**
+	 * Output the TOC shortcode.
+	 *
 	 * @param array $atts
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	public static function output_toc( $atts ) {
 		$atts = shortcode_atts( array(
@@ -50,11 +52,11 @@ class JCK_STOC_Shortcodes {
 					$( '<?php echo esc_attr( $atts['content'] ); ?>' ).anchorific( {
 						navigation: '.shortcode-toc', // position of navigation
 						headers: '<?php echo esc_attr( $atts['headers'] ); ?>', // headers that you wish to target
-						speed: <?php echo (int) esc_attr( $atts['speed'] ); ?>, // speed of sliding back to top
+						speed: <?php echo (int) $atts['speed']; ?>, // speed of sliding back to top
 						anchorClass: '<?php echo esc_attr( $atts['anchor-class'] ); ?>', // class of anchor links
 						anchorText: '<?php echo esc_attr( $atts['anchor-text'] ); ?>', // prepended or appended to anchor headings
 						top: '<?php echo esc_attr( $atts['top_class'] ); ?>', // back to top button or link class
-						spy: <?php echo esc_attr( $atts['spy'] ); ?>, // scroll spy
+						spy: <?php echo (bool) $atts['spy']; ?>, // scroll spy
 						position: '<?php echo esc_attr( $atts['position'] ); ?>', // position of anchor text
 						spyOffset: <?php echo esc_attr( $atts['spy-offset'] ); ?> // specify heading offset for spy scrolling
 					} );
