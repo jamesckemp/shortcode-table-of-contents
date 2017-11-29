@@ -28,3 +28,4 @@ tmp/
 bower_components/
 .idea
 fs-config.json
+/svn/

@@ -66,6 +66,8 @@ You can use the `do_shortcode()` function like this:
 
 == Changelog ==
 
+**v1.0.0 (29/11/2017)**
+[release] Initial release.
 
 == Upgrade Notice ==
 
