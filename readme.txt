@@ -66,7 +66,7 @@ You can use the `do_shortcode()` function like this:
 
 == Changelog ==
 
-**v1.0.1 (29/11/2017)**
+**v1.0.1 (30/11/2017)**
 [update] Remove anchor text by default.
 [fix] Ensure 'spy' param works with true/false values.
 
