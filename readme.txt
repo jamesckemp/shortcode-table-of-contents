@@ -1,7 +1,7 @@
 === Shortcode Table of Contents ===
 Contributors: jamesckemp
 Donate link: https://www.paypal.me/jamesckemp/
-Tags:
+Tags: shortcode table of contents, toc, table of contents, anchorific, anchors, anchor links, shortcode
 Requires at least: 4.0
 Tested up to: 4.8
 Stable tag: trunk
