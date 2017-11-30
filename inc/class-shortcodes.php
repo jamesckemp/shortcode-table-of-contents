@@ -34,7 +34,7 @@ class JCK_STOC_Shortcodes {
 			'anchor-class' => 'anchor', // class of anchor links
 			'anchor-text'  => '', // prepended or appended to anchor headings
 			'top_class'    => '.top', // back to top button or link class
-			'spy'          => 'false', // scroll spy
+			'spy'          => false, // scroll spy
 			'position'     => 'append', // position of anchor text
 			'spy-offset'   => 0 // specify heading offset for spy scrolling
 		), $atts, 'toc' );
@@ -42,6 +42,8 @@ class JCK_STOC_Shortcodes {
 		if ( is_null( $atts['content'] ) ) {
 			return;
 		}
+
+		$atts['spy'] = filter_var( $atts['spy'], FILTER_VALIDATE_BOOLEAN );
 
 		ob_start();
 		?>
@@ -56,7 +58,7 @@ class JCK_STOC_Shortcodes {
 						anchorClass: '<?php echo esc_attr( $atts['anchor-class'] ); ?>', // class of anchor links
 						anchorText: '<?php echo esc_attr( $atts['anchor-text'] ); ?>', // prepended or appended to anchor headings
 						top: '<?php echo esc_attr( $atts['top_class'] ); ?>', // back to top button or link class
-						spy: <?php echo (bool) $atts['spy']; ?>, // scroll spy
+						spy: <?php echo $atts['spy'] ? 'true' : 'false'; ?>, // scroll spy
 						position: '<?php echo esc_attr( $atts['position'] ); ?>', // position of anchor text
 						spyOffset: <?php echo esc_attr( $atts['spy-offset'] ); ?> // specify heading offset for spy scrolling
 					} );
