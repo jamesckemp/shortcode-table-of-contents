@@ -32,7 +32,7 @@ class JCK_STOC_Shortcodes {
 			'headers'      => 'h1, h2, h3, h4, h5, h6', // headers that you wish to target
 			'speed'        => 200, // speed of sliding back to top
 			'anchor-class' => 'anchor', // class of anchor links
-			'anchor-text'  => '#', // prepended or appended to anchor headings
+			'anchor-text'  => '', // prepended or appended to anchor headings
 			'top_class'    => '.top', // back to top button or link class
 			'spy'          => 'false', // scroll spy
 			'position'     => 'append', // position of anchor text
