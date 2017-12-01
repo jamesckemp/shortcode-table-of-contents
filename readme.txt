@@ -66,6 +66,9 @@ You can use the `do_shortcode()` function like this:
 
 == Changelog ==
 
+**v1.0.2 (01/12/2017)**
+[update] Use latest anchorific.
+
 **v1.0.1 (30/11/2017)**
 [update] Remove anchor text by default.
 [fix] Ensure 'spy' param works with true/false values.
