@@ -63,6 +63,10 @@ You can use the `do_shortcode()` function like this:
 
 == Screenshots ==
 
+1. Add the `[toc]` shortcode to any post/page/custom-post-type, at any position in the content.
+2. A nested list will be generated based on the headings within your chosen HTML element.
+3. Add the `anchor-text` parameter.
+4. When the `anchor-text` parameter is set, the text will be appended to your headings so your users can easily copy the link to that section.
 
 == Changelog ==
 
