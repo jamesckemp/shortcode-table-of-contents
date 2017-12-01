@@ -14,6 +14,6 @@ require( 'iconic-plugin' )( {
 		'vendor/jamesckemp/WordPress-Settings-Framework/assets/vendor/jquery-timepicker/jquery.ui.timepicker.js': 'inc/vendor/wp-settings-framework/assets/vendor/jquery-timepicker',
 		'vendor/jamesckemp/WordPress-Settings-Framework/assets/vendor/jquery-timepicker/jquery.ui.timepicker.css': 'inc/vendor/wp-settings-framework/assets/vendor/jquery-timepicker',
 		'vendor/freemius/wordpress-sdk/**/*': 'inc/freemius',
-		'bower_components/anchorific.js/min/anchorific.min.js': 'assets/vendor/js'
+		'bower_components/anchorific.js/src/anchorific.js': 'assets/vendor/js'
 	}
 } );
