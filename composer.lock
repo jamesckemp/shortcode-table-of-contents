@@ -1,0 +1,84 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "5060d9b7a0995b5e391316aecea52dc4",
+    "content-hash": "d4d0da300338a0df5ff6273ef7e01cbc",
+    "packages": [
+        {
+            "name": "freemius/wordpress-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Freemius/wordpress-sdk.git",
+                "reference": "c189ba899aa1c116066a5bcf06a9481d0607dfa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/c189ba899aa1c116066a5bcf06a9481d0607dfa1",
+                "reference": "c189ba899aa1c116066a5bcf06a9481d0607dfa1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "description": "Freemius WordPress SDK",
+            "homepage": "https://freemius.com",
+            "keywords": [
+                "freemius",
+                "plugin",
+                "sdk",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/Freemius/wordpress-sdk/tree/2.1.2",
+                "issues": "https://github.com/Freemius/wordpress-sdk/issues"
+            },
+            "time": "2018-07-15 13:59:33"
+        },
+        {
+            "name": "jamesckemp/WordPress-Settings-Framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jamesckemp/WordPress-Settings-Framework.git",
+                "reference": "2e3c25f4757f4dd3e7a4e9d19654cde3d1a7b7c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jamesckemp/WordPress-Settings-Framework/zipball/2e3c25f4757f4dd3e7a4e9d19654cde3d1a7b7c5",
+                "reference": "2e3c25f4757f4dd3e7a4e9d19654cde3d1a7b7c5",
+                "shasum": ""
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "James Kemp",
+                    "email": "me@jckemp.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/jamesckemp/WordPress-Settings-Framework/tree/master",
+                "issues": "https://github.com/jamesckemp/WordPress-Settings-Framework/issues"
+            },
+            "time": "2018-02-08 20:52:24"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "jamesckemp/wordpress-settings-framework": 20,
+        "freemius/wordpress-sdk": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

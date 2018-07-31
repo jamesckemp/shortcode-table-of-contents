@@ -3,7 +3,7 @@
 Plugin Name: Shortcode Table of Contents
 Plugin URI: http://jckemp.com
 Description: Display an automated table of contents via shortcode.
-Version: 1.0.2
+Version: 1.0.3
 Author: James Kemp
 Author URI: https://jckemp.com
 Text Domain: shortcode-toc
@@ -20,7 +20,7 @@ class JCK_Shortcode_TOC {
 	 *
 	 * @var string
 	 */
-	public $version = "1.0.2";
+	public $version = "1.0.3";
 
 	/**
 	 * Full name

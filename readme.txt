@@ -70,6 +70,9 @@ You can use the `do_shortcode()` function like this:
 
 == Changelog ==
 
+**v1.0.3 (31/07/2018)**
+[fix] Revert back to original anchorific. Bower one was an old version.
+
 **v1.0.2 (01/12/2017)**
 [update] Use latest anchorific.
 

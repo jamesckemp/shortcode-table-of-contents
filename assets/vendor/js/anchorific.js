@@ -24,7 +24,9 @@
 
 if ( typeof Object.create !== 'function' ) {
 	Object.create = function( obj ) {
-		function F() {}
+		function F() {
+		}
+
 		F.prototype = obj;
 		return new F();
 	};
@@ -34,9 +36,6 @@ if ( typeof Object.create !== 'function' ) {
 	"use strict";
 
 	var Anchorific = {
-		
-		// array of unique slug names
-        names: [],
 
 		init: function( options, elem ) {
 			var self = this;
@@ -44,32 +43,34 @@ if ( typeof Object.create !== 'function' ) {
 			self.elem = elem;
 			self.$elem = $( elem );
 
-			self.opt = $.extend( {},  this.opt, options );
+			self.opt = $.extend( {}, this.opt, options );
 
-			self.headers = self.$elem.find( 'h1, h2, h3, h4, h5, h6' );
+			self.headers = self.$elem.find( self.opt.headers );
 			self.previous = 0;
 
 			// Fix bug #1
 			if ( self.headers.length !== 0 ) {
 				self.first = parseInt( self.headers.prop( 'nodeName' ).substring( 1 ), null );
 			}
-			
+
 			self.build();
 		},
 
 		opt: {
 			navigation: '.anchorific', // position of navigation
+			headers: 'h1, h2, h3, h4, h5, h6', // custom headers selector
 			speed: 200, // speed of sliding back to top
 			anchorClass: 'anchor', // class of anchor links
 			anchorText: '#', // prepended or appended to anchor headings
 			top: '.top', // back to top button or link class
 			spy: true, // scroll spy
 			position: 'append', // position of anchor text
-			spyOffset: !0 // specify heading offset for spy scrolling
+			spyOffset: ! 0 // specify heading offset for spy scrolling
 		},
-		
+
 		build: function() {
-			var self = this, obj, navigations = function() {};
+			var self = this, obj, navigations = function() {
+			};
 			// when navigation configuration is set
 			if ( self.opt.navigation ) {
 				$( self.opt.navigation ).append( '<ul />' );
@@ -79,27 +80,30 @@ if ( typeof Object.create !== 'function' ) {
 				};
 			}
 
-			for( var i = 0; i < self.headers.length; i++ ) {
+			for ( var i = 0; i < self.headers.length; i ++ ) {
 				obj = self.headers.eq( i );
-				self.anchor( obj );
 				navigations( obj );
+				self.anchor( obj );
 			}
 
-			if ( self.opt.spy )
+			if ( self.opt.spy ) {
 				self.spy();
+			}
 
-			if ( self.opt.top ) 
+			if ( self.opt.top ) {
 				self.back();
+			}
 		},
-		
+
 		navigations: function( obj ) {
 			var self = this, link, list, which, name = self.name( obj );
 
-			if ( obj.attr( 'id' ) !== undefined )
+			if ( obj.attr( 'id' ) !== undefined ) {
 				name = obj.attr( 'id' );
+			}
 
 			link = $( '<a />' ).attr( 'href', '#' + name ).text( obj.text() );
-			list = $( '<li />' ).append( link ); 
+			list = $( '<li />' ).append( link );
 
 			which = parseInt( obj.prop( 'nodeName' ).substring( 1 ), null );
 			list.attr( 'data-tag', which );
@@ -128,8 +132,8 @@ if ( typeof Object.create !== 'function' ) {
 
 		name: function( obj ) {
 			var name = obj.text().replace( /[^\w\s]/gi, '' )
-								.replace( /\s+/g, '-' )
-								.toLowerCase();
+				.replace( /\s+/g, '-' )
+				.toLowerCase();
 
 			return name;
 		},
@@ -138,17 +142,11 @@ if ( typeof Object.create !== 'function' ) {
 			var self = this, name = self.name( obj ), anchor, text = self.opt.anchorText,
 				klass = self.opt.anchorClass, id;
 
-			if ( obj.attr( 'id' ) === undefined )
+			if ( obj.attr( 'id' ) === undefined ) {
 				obj.attr( 'id', name );
+			}
 
 			id = obj.attr( 'id' );
-			
-			while ($.inArray(id, self.names) >= 0){
-                id += "_";
-            }
-		
-            obj.attr( 'id', id );
-            self.names.push(id);
 
 			anchor = $( '<a />' ).attr( 'href', '#' + id ).html( text ).addClass( klass );
 
@@ -165,10 +163,10 @@ if ( typeof Object.create !== 'function' ) {
 			top.on( 'click', function( e ) {
 				e.preventDefault();
 
-				body.animate({
+				body.animate( {
 					'scrollTop': 0
 				}, self.opt.speed );
-			});
+			} );
 		},
 
 		top: function( that ) {
@@ -176,8 +174,8 @@ if ( typeof Object.create !== 'function' ) {
 
 			if ( top !== false ) {
 				back = ( $( that ).scrollTop() > 200 ) ?
-						$( top ).fadeIn() :
-						$( top ).fadeOut();
+				       $( top ).fadeIn() :
+				       $( top ).fadeOut();
 			}
 		},
 
@@ -192,7 +190,7 @@ if ( typeof Object.create !== 'function' ) {
 					if ( ( $( this ).offset().top - $( window ).scrollTop() ) < self.opt.spyOffset ) {
 						return this;
 					}
-				});
+				} );
 				// get only the latest header on the viewport
 				current = $( current ).eq( current.length - 1 );
 
@@ -207,12 +205,12 @@ if ( typeof Object.create !== 'function' ) {
 					list.addClass( 'active' );
 					prev = list;
 				}
-			});
+			} );
 		}
 	};
 
 	$.fn.anchorific = function( options ) {
-		return this.each(function() {
+		return this.each( function() {
 			if ( ! $.data( this, 'anchorific' ) ) {
 				var anchor = Object.create( Anchorific );
 
@@ -220,7 +218,7 @@ if ( typeof Object.create !== 'function' ) {
 
 				$.data( this, 'anchorific', anchor );
 			}
-		});
+		} );
 	};
 
 })( jQuery, window, document );

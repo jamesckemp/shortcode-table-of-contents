@@ -1,28 +1,23 @@
 {
-    "name": "jamesckemp/simple-feature-requests",
-    "authors": [
-        {
-            "name": "James Kemp",
-            "email": "me@jckemp.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jamesckemp/WordPress-Settings-Framework.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/GaryJones/Gamajo-Template-Loader.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Freemius/wordpress-sdk"
-        }
-
-    ],
-    "require": {
-        "jamesckemp/WordPress-Settings-Framework": "dev-master",
-        "Freemius/wordpress-sdk": "dev-develop"
+  "name": "jamesckemp/simple-feature-requests",
+  "authors": [
+    {
+      "name": "James Kemp",
+      "email": "me@jckemp.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/jamesckemp/WordPress-Settings-Framework.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Freemius/wordpress-sdk"
+    }
+  ],
+  "require": {
+    "jamesckemp/WordPress-Settings-Framework": "dev-master",
+    "Freemius/wordpress-sdk": "dev-master#2.1.1"
+  }
 }
